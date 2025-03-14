@@ -1,7 +1,3 @@
-Here’s a well-structured and comprehensive README file for your "Salah GPT" Streamlit application. It includes an overview, features, installation instructions, usage guide, and other relevant details tailored to the provided code.
-
----
-
 # Salah GPT - Islamic Prayer Assistant
 
 ![Salah GPT Icon](https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f54b.svg)
@@ -50,6 +46,7 @@ Here’s a well-structured and comprehensive README file for your "Salah GPT" St
 ### Steps
 
 1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/yourusername/salah-gpt.git
    cd salah-gpt
@@ -57,6 +54,7 @@ Here’s a well-structured and comprehensive README file for your "Salah GPT" St
 
 2. **Install Dependencies**:
    Create a virtual environment and install the required packages:
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -64,6 +62,7 @@ Here’s a well-structured and comprehensive README file for your "Salah GPT" St
    ```
 
    Contents of `requirements.txt`:
+
    ```
    streamlit==1.25.0
    requests==2.31.0
@@ -79,14 +78,17 @@ Here’s a well-structured and comprehensive README file for your "Salah GPT" St
 
 3. **Set Up Environment Variables**:
    Create a `.env` file in the root directory and add your OpenAI API key:
+
    ```
    OPENAI_API_KEY=your_openai_api_key_here
    ```
 
 4. **Run the Application**:
+
    ```bash
    streamlit run app.py
    ```
+
    Replace `app.py` with the name of your Python file containing the code.
 
 ---
@@ -177,5 +179,3 @@ For questions or support, reach out via [your.email@example.com](mailto:your.ema
 *Last Updated: March 14, 2025*
 
 ---
-
-This README is designed to be clear, professional, and informative, catering to both users and developers. You can customize the repository URL, contact info, and screenshots as needed when hosting it online!
