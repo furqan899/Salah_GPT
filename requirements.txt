@@ -1,0 +1,44 @@
+# Core web and UI framework
+streamlit>=1.31.0
+
+# HTTP requests
+requests>=2.31.0
+aiohttp>=3.9.3
+
+# HTML parsing
+beautifulsoup4>=4.12.3
+
+# Environment variable management
+python-dotenv>=1.0.1
+
+# OpenAI API client
+openai>=1.14.0
+
+# JSON handling (built-in, but listing for clarity)
+# json (no need to install, part of Python stdlib)
+
+# Date and time handling
+pytz>=2024.1
+
+# Hashing (built-in, but listing for clarity)
+# hashlib (no need to install, part of Python stdlib)
+
+# Async and concurrency
+# asyncio (no need to install, part of Python stdlib)
+concurrent.futures>=3.9  # Usually part of stdlib, but version might vary
+
+# Threading (built-in)
+# threading (no need to install, part of Python stdlib)
+
+# Function decorators (built-in)
+# functools (no need to install, part of Python stdlib)
+
+# HTML escaping (built-in)
+# html (no need to install, part of Python stdlib)
+
+# Language detection
+langdetect>=1.0.9
+
+# Geolocation and timezone detection
+geopy>=2.4.1
+timezonefinder>=6.2.0

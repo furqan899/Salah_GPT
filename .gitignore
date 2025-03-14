@@ -1,0 +1,75 @@
+# Python-specific ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Environment variables file
+.env
+
+# Dependency lock files (if you use pipenv or poetry)
+Pipfile.lock
+poetry.lock
+
+# Streamlit-specific ignores
+.streamlit/secrets.toml
+.streamlit/*.db
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Test-related ignores
+*.cache
+coverage/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Miscellaneous
+*.bak
+*.swp
+*~
+*.tmp
+
+# Project-specific sensitive data
+# Add any API keys or credentials files if not using .env
+openai_api_key.txt
+secrets/
