@@ -791,7 +791,7 @@ if st.button("Clear Conversation"):
     st.session_state.messages = [
         {"role": "assistant", "content": "Assalamu alaikum! I'm Salah GPT, your Islamic prayer assistant. I search reputable Islamic websites to provide accurate information about Salah (prayer), prayer times, wudu, and other prayer-related questions. Ask me anything!"}
     ]
-    st.experimental_rerun()
+    st.rerun()
 
 # Footer with improved styling
 st.markdown("---")
