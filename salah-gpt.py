@@ -471,38 +471,6 @@ def generate_response(query, results, madhab=None):
         st.error(f"Error generating response: {str(e)}")
         return None
 
-def validate_wudu():
-    """Return step-by-step wudu instructions"""
-    steps = [
-        "Wash hands 3 times",
-        "Rinse mouth 3 times",
-        "Clean nose 3 times",
-        "Wash face 3 times",
-        "Wash arms up to elbows 3 times",
-        "Wipe head once",
-        "Wash feet up to ankles 3 times"
-    ]
-    return "\n".join([f"- {step}" for step in steps]) + "\n\n**Note**: Ensure water reaches all required areas, maintain order (Hanafi/Shafi'i), and make niyyah (intention)."
-
-def salah_validation():
-    """Return prerequisites and pillars of salah"""
-    return """
-    **Salah Prerequisites**:
-    - Wudu: Complete ablution (see steps above).
-    - Purity: Clean body, clothes, and place of prayer.
-    - Niyyah: Intention in heart for specific prayer (e.g., 'I intend to pray 2 rak'ahs of Fajr').
-    - Qibla: Face the Ka'bah.
-    - Time: Perform within prayer window.
-    
-    **Pillars (Arkan)**:
-    - Takbir al-Ihram: 'Allahu Akbar' to start.
-    - Recite Surah Al-Fatihah: Mandatory in every rak'ah (Hanafi/Shafi'i).
-    - Ruku: Bow with tuma'ninah (calmness, pause for 1-2 seconds).
-    - Sujud: Prostrate twice per rak'ah with tuma'ninah.
-    - Tashahhud: Sit and recite after 2nd and final rak'ah.
-    - Tasleem: 'Assalamu alaikum wa rahmatullah' to end.
-    """
-
 def get_location_timezone(city, country):
     try:
         geolocator = Nominatim(user_agent="salah_gpt")
@@ -516,28 +484,6 @@ def get_location_timezone(city, country):
         return pytz.timezone("UTC")
     except Exception as e:
         st.warning(f"Could not determine timezone: {str(e)}. Using UTC as fallback.")
-        return pytz.timezone("UTC")
-
-def awrah_guidance(gender, madhab):
-    """Return awrah guidance based on gender and madhab"""
-    guidance = {
-        "Hanafi": {"Male": "Navel to knees", "Female": "Entire body except face, hands, and feet"},
-        "Shafii": {"Male": "Navel to knees", "Female": "Entire body except face and hands"},
-        "Maliki": {"Male": "Navel to knees", "Female": "Entire body except face and hands"},
-        "Hanbali": {"Male": "Navel to knees", "Female": "Entire body except face and hands"}
-    }
-    madhab = madhab.capitalize() if madhab else "Hanafi"  # Default to Hanafi
-    return guidance.get(madhab, guidance["Hanafi"])[gender.capitalize()]
-
-def get_user_timezone():
-    """Get user's timezone with fallback"""
-    if "timezone" not in st.session_state:
-        st.session_state.timezone = "UTC"
-    
-    try:
-        return pytz.timezone(st.session_state.timezone)
-    except pytz.exceptions.UnknownTimeZoneError:
-        st.warning("Unknown timezone, using UTC instead")
         return pytz.timezone("UTC")
 
 # JavaScript to fetch client timezone
